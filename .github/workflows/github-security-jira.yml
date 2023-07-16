@@ -20,4 +20,4 @@ jobs:
           JIRA_USER: theycallmeburner@gmail.com
           JIRA_PROJECT: PSV
           JIRA_ISSUE_TYPE: Task
-          JIRA_RESTRICTED_COMMENT_ROLE: Member
+          JIRA_RESTRICTED_COMMENT_ROLE: Administrator
