@@ -1,0 +1,19 @@
+name: GitHub Security Alerts for Jira
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+
+jobs:
+  syncSecurityAlerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Sync security alerts to Jira issues"
+        uses: reload/github-security-jira@v1.x
+        env:
+          GH_SECURITY_TOKEN: ${{ secrets.GitHubSecurityToken }}
+          JIRA_TOKEN: ${{ secrets.JiraApiToken }}
+          JIRA_HOST: https://psvm-workshop.atlassian.net
+          JIRA_USER: theycallmeburner@gmail.com
+          JIRA_PROJECT: PSV
+          JIRA_ISSUE_TYPE: Task
